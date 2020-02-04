@@ -1,0 +1,16 @@
+extends layout
+block content
+  script(src='/javascripts/dropzone.js')
+  link(rel="stylesheet", href="stylesheets/admin.css")
+  div#content
+    h1= 'Admin zone'
+    form(method='POST' action='/update')
+      input.form-control(type='number', id='speed', name='speed' placeholder='Rychlost prezentace v sekundách.' style="width: 300px")
+
+      button(type='submit') Aktualizovat rychlost
+    form(method='POST', action='/upload', class='uplood' id='imageUpload' enctype="multipart/form-data")
+      input(type="file" name="img" multiple)
+      button(type="submit") Nahrát a nahradit
+    
+    +a-btn-warning("/") K prezentaci
+    

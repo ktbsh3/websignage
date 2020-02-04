@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/style.css')
+
+  div#cont
+    ul#slideshow
+      for obrazek in obrazky
+        li(class='slide')
+          img(src=`/images/${obrazek}`, alt='', srcset='')
+  script var slidespeed = #{slidespeed}
+  script(src='/javascripts/carousel.js')
+  script(src="/javascripts/live.js")
