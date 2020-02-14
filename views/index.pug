@@ -5,9 +5,15 @@ block content
 
   div#cont
     ul#slideshow
-      for file in screen.files
-        li(class='slide')
-          img(src=`/images/${file.name}`, alt='', srcset='')
+      if (screen)
+        if (file)
+          for file in screen.files
+            li(class='slide')
+              img(src=`/images/${file.name}`, alt='', srcset='')
+        else
+          p NO FILE
+      else
+        p NO SCREEN
   script var slidespeed = #{slidespeed}
   script var screencfg = !{JSON.stringify(screen)}
   script(src='/javascripts/carousel.js')

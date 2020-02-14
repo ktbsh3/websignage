@@ -5,15 +5,21 @@ block content
   div#content
     h1= 'Admin zone'
     div
+      if (files)
+        for file in files
+          p #{file}
       form(method='POST', action='/upload', class='uplood' id='imageUpload' enctype="multipart/form-data")
-      input(type="file" name="img" multiple)
-      button(type="submit") Nahrát
+        input(type="file" name="img" multiple)
+        button(type="submit") Nahrát
     form(method='POST' action='/update/create')
       input.form-control(type='number', id='screenID', name='screenID' placeholder='ID Obrazovky' style="width: 300px")
       button(type='submit') Vytvorit obrazovku
     div
-      for screen in config.screens 
-        p #{screen.id}
+      if (config.screens)
+        for screen in config.screens 
+          p #{screen.id}
+            for file in screen.files
+              #{file.name}
     form(method='POST' action='/update/remove')
       input.form-control(type='number', id='screenID', name='screenID' placeholder='ID Obrazovky' style="width: 300px")
       button(type='submit') Odebrat obrazovku

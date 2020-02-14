@@ -11,28 +11,40 @@ router.get('/', function(req, res, next) {
 
 router.post('/', (req, res)=> {
         var path = fileman.dirs.images;
-        console.log(path)
         let files = req.files.img;
+        /*
         for (let file of fileman.getDirListingSync(path)) {
           fs.unlinkSync(path+file);
           console.log("Removing "+path+file);
         }
+        */
         
         if (isIterable(files)) {
             for (let file of files) {
+              if (fileman.getDirListingSync(path).indexOf(file.name) === -1) {
                 file.mv(path+file.name, (err)=> {
                     if (err) console.log(err);
                     console.log("Adding "+path+file.name);
                 });
+              }
+              else {
+                console.log(path + files.name + " -- Already exists, skipping");
+              }
+
             };
         }
         else {
+          if (fileman.getDirListingSync(path).indexOf(files.name) === -1){
             files.mv(path+files.name, (err)=> {
-                if (err) console.log(err);
-                console.log("Adding "+path+files.name);
-            })
+              if (err) console.log(err);
+              console.log("Adding "+path+files.name);
+          })
+          }
+           else {
+             console.log(path + files.name + " -- Already exists, skipping");
+           } 
         }
-        res.render('admin');
+        res.redirect('/admin');
 });
 
 function isIterable(obj) {
