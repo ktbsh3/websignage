@@ -23,7 +23,9 @@ function getDirListingSync(path) {
 }
 
 function getConfigSync() {
-    return jsonfile.readFileSync(files.data_json);
+    let jsf = jsonfile.readFileSync(files.data_json);
+    console.log(jsf);
+    return jsf
 }
 
 function getScreen(id) {
@@ -74,4 +76,34 @@ function removeScreen(id) {
 
 }
 
-module.exports={getDirListingSync, getConfigSync, setConfigSync, addScreen, removeScreen, getScreen, dirs, files};
+function deleteFileSync(file) {
+    let path = dirs.images
+    console.log("Removing "+path+file)
+    fs.unlinkSync(path+file);
+    for (let i = 0; i <= 100; i++) {
+        unassignFileSync(file, i);
+    }
+}
+
+function assignFileSync(file, id) {
+    id = Number(id);
+    let conffile = getConfigSync();
+    let index = conffile.screens.findIndex( screen => screen.id === id);
+    conffile.screens[index].files.push(file);
+    jsonfile.writeFileSync(files.data_json, conffile);
+}
+
+function unassignFileSync(file, id) {
+    id = Number(id);
+    let conffile = getConfigSync();
+    let screenIndex = conffile.screens.findIndex( screen => screen.id === id);
+    if (screenIndex != -1) {
+        let fileIndex = conffile.screens[screenIndex].files.findIndex(filename => filename === file);
+        if (fileIndex != -1) {
+            conffile.screens[screenIndex].files.splice(fileIndex, 1)
+        }
+    }
+    jsonfile.writeFileSync(files.data_json, conffile);
+}
+
+module.exports={getDirListingSync, getConfigSync, setConfigSync, addScreen, removeScreen, getScreen, deleteFileSync, assignFileSync, unassignFileSync, dirs, files};

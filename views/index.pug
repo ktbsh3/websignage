@@ -6,12 +6,17 @@ block content
   div#cont
     ul#slideshow
       if (screen)
-        if (file)
+        if (screen.files != "")
           for file in screen.files
             li(class='slide')
-              img(src=`/images/${file.name}`, alt='', srcset='')
-        else
-          p NO FILE
+              if ( file.endsWith(".mp4") || file.endsWith(".webm") )
+                video(src=`/images/${file}` muted)
+                p #{file}
+              else 
+                img(src=`/images/${file}`, alt='', srcset='')
+
+        else 
+          p NO FILES
       else
         p NO SCREEN
   script var slidespeed = #{slidespeed}

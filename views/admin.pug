@@ -6,8 +6,23 @@ block content
     h1= 'Admin zone'
     div
       if (files)
+      form(action="/update/filemgr", method="post")
         for file in files
-          p #{file}
+          div(style="display: block ruby;")
+            input(type="checkbox", name=file, id=file)
+            label(for=file, style="margin-left: 10px") #{file}
+        div(style="display: block ruby")
+          input#remove(type="radio", name="mode", value="remove", checked)
+          label(for="remove") Odstranit
+          input#assign(type="radio", name="mode", value="assign")
+          label(for="assign") Priradit k obrazovce
+          input#unassign(type="radio", name="mode", value="unassign")
+          label(for="unassign") Odebrat z obrazovky 
+          select#screenselect(name="screenselect")
+            if (config.screens)
+              for screen in config.screens
+                option(value=screen.id) #{screen.id}
+        button(type='submit') Potvrdit
       form(method='POST', action='/upload', class='uplood' id='imageUpload' enctype="multipart/form-data")
         input(type="file" name="img" multiple)
         button(type="submit") Nahrát
@@ -19,7 +34,7 @@ block content
         for screen in config.screens 
           p #{screen.id}
             for file in screen.files
-              #{file.name}
+              em #{file}
     form(method='POST' action='/update/remove')
       input.form-control(type='number', id='screenID', name='screenID' placeholder='ID Obrazovky' style="width: 300px")
       button(type='submit') Odebrat obrazovku
