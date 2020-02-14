@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var fs = require('fs');
-var projpath = '/home/ktbsh/werk/telka/node_web/kyoma';
+var fileman = require('../classes/fileman');
 
 
 /* GET users listing. */
@@ -10,9 +10,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', (req, res)=> {
-        var path = projpath+"/public/images/";
+        var path = fileman.dirs.images;
+        console.log(path)
         let files = req.files.img;
-        for (let file of fs.readdirSync(path)) {
+        for (let file of fileman.getDirListingSync(path)) {
           fs.unlinkSync(path+file);
           console.log("Removing "+path+file);
         }
@@ -21,12 +22,14 @@ router.post('/', (req, res)=> {
             for (let file of files) {
                 file.mv(path+file.name, (err)=> {
                     if (err) console.log(err);
+                    console.log("Adding "+path+file.name);
                 });
             };
         }
         else {
             files.mv(path+files.name, (err)=> {
                 if (err) console.log(err);
+                console.log("Adding "+path+files.name);
             })
         }
         res.render('admin');

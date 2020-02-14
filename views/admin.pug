@@ -4,13 +4,19 @@ block content
   link(rel="stylesheet", href="stylesheets/admin.css")
   div#content
     h1= 'Admin zone'
-    form(method='POST' action='/update')
-      input.form-control(type='number', id='speed', name='speed' placeholder='Rychlost prezentace v sekundách.' style="width: 300px")
-
-      button(type='submit') Aktualizovat rychlost
-    form(method='POST', action='/upload', class='uplood' id='imageUpload' enctype="multipart/form-data")
+    div
+      form(method='POST', action='/upload', class='uplood' id='imageUpload' enctype="multipart/form-data")
       input(type="file" name="img" multiple)
-      button(type="submit") Nahrát a nahradit
+      button(type="submit") Nahrát
+    form(method='POST' action='/update/create')
+      input.form-control(type='number', id='screenID', name='screenID' placeholder='ID Obrazovky' style="width: 300px")
+      button(type='submit') Vytvorit obrazovku
+    div
+      for screen in config.screens 
+        p #{screen.id}
+    form(method='POST' action='/update/remove')
+      input.form-control(type='number', id='screenID', name='screenID' placeholder='ID Obrazovky' style="width: 300px")
+      button(type='submit') Odebrat obrazovku
     
     +a-btn-warning("/") K prezentaci
     

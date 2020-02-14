@@ -5,9 +5,10 @@ block content
 
   div#cont
     ul#slideshow
-      for obrazek in obrazky
+      for file in screen.files
         li(class='slide')
-          img(src=`/images/${obrazek}`, alt='', srcset='')
+          img(src=`/images/${file.name}`, alt='', srcset='')
   script var slidespeed = #{slidespeed}
+  script var screencfg = !{JSON.stringify(screen)}
   script(src='/javascripts/carousel.js')
   script(src="/javascripts/live.js")
