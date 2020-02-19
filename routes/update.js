@@ -5,9 +5,8 @@ var fileman = require('../classes/fileman');
 
 /* GET users listing. */
 router.post('/', function(req, res, next) {
-  fileman.setConfigSync('speed', req.body.speed*1000);
-  fileman.setConfigSync('screens', req.body.nOfScreens);
-  res.render('admin');
+  fileman.setConfigSync(Number(req.body.screen), req.body.speed*1000);
+  res.redirect('/admin');
 });
 
 router.post('/filemgr/', function(req, res, next) {
@@ -34,7 +33,7 @@ router.post('/filemgr/', function(req, res, next) {
       }
     }
   }
-  res.redirect('/admin');
+  res.redirect('/admin'+"?id="+req.body.screenselect+"&mode="+req.body.mode);
 })
 
 router.post('/remove/', function(req, res, next) {
