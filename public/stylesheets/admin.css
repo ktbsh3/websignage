@@ -17,3 +17,7 @@ body {
 #content > form {
     display: inline;
 }
+
+button {
+    width: 150px;
+}

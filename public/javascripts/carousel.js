@@ -23,7 +23,7 @@ var videos = document.querySelectorAll('video');
 var currentSlide = 0;
 slides[currentSlide].className = 'slide showing';
 var slideTimer;
-var speed = 5000;
+var speed = slidespeed;
 timer.start();
 playCurrentVideo();
 

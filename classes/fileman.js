@@ -5,7 +5,7 @@ var jsonfile = require('jsonfile');
 
 const screenTemplate = {
     "id": null,
-    "name": "",
+    "speed": 10000,
     "files": []
 }
 // directory enum
@@ -41,15 +41,18 @@ function getConfigSync(parameter) {
     }
 }
 
-function setConfigSync(parameter, data) {
+//Should be called set speed but we saving time now
+function setConfigSync(id, data) {
     // obtain current contents of data.json and modify the config object
-    var current = getConfigSync();
-    console.log("Updating " + parameter)
-    console.log(current);
-    current.config[parameter] = data;
-    // save modified datafile
-    console.log(current);
-    jsonfile.writeFileSync(files.data_json, current);
+    var conffile = getConfigSync();
+    console.log(conffile);
+    let screenId = conffile.screens.findIndex( screen => screen.id === id);
+    console.log(screenId);
+    if (conffile.screens[screenId]) {
+        console.log("found screen" + id + " at " + screenId)
+        conffile.screens[screenId].speed = data;
+        jsonfile.writeFileSync(files.data_json, conffile);
+    }
 }
 
 function addScreen(id) {
@@ -98,9 +101,11 @@ function unassignFileSync(file, id) {
     let conffile = getConfigSync();
     let screenIndex = conffile.screens.findIndex( screen => screen.id === id);
     if (screenIndex != -1) {
-        let fileIndex = conffile.screens[screenIndex].files.findIndex(filename => filename === file);
-        if (fileIndex != -1) {
-            conffile.screens[screenIndex].files.splice(fileIndex, 1)
+        while (conffile.screens[screenIndex].files.findIndex(filename => filename === file) >= 0) {
+            let fileIndex = conffile.screens[screenIndex].files.findIndex(filename => filename === file);
+            if (fileIndex != -1) {
+                conffile.screens[screenIndex].files.splice(fileIndex, 1)
+            }
         }
     }
     jsonfile.writeFileSync(files.data_json, conffile);

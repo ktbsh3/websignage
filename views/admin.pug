@@ -4,25 +4,37 @@ block content
   link(rel="stylesheet", href="stylesheets/admin.css")
   div#content
     h1= 'Admin zone'
-    div
+    div(style='background-color: #fffbf0; padding: 5px')
+      h3 Sprava souboru
       if (files)
       form(action="/update/filemgr", method="post")
         for file in files
-          div(style="display: block ruby;")
-            input(type="checkbox", name=file, id=file)
-            label(for=file, style="margin-left: 10px") #{file}
+          div(style="display: flex; justify-content:space-evenly")
+            div(style="display: block ruby; margin-left:10px")
+              input(type="checkbox", name=file, id=file, style='margin-left:10px')
+              label(for=file, style="margin-left: 10px") #{file}
+            div(style='margin-right:10px')
+              if (file.endsWith('.webm'))
+                video(src="/images/"+file style="width:192px; height:108px; margin:0; vertical-align:middle" controls)
+              else
+                img(src="/images/"+file, alt="", style="width:192px; height:108px; margin:0")
         div(style="display: block ruby")
-          input#remove(type="radio", name="mode", value="remove", checked)
+          input#remove(type="radio", name="mode", value="remove", checked=(mode == 'remove'))
           label(for="remove") Odstranit
-          input#assign(type="radio", name="mode", value="assign")
+          input#assign(type="radio", name="mode", value="assign", checked=(mode == 'assign'))
           label(for="assign") Priradit k obrazovce
-          input#unassign(type="radio", name="mode", value="unassign")
+          input#unassign(type="radio", name="mode", value="unassign", checked=(mode == 'unassign'))
           label(for="unassign") Odebrat z obrazovky 
           select#screenselect(name="screenselect")
             if (config.screens)
               for screen in config.screens
-                option(value=screen.id) #{screen.id}
+                if (screen.id == lastset)
+                  option(value=screen.id, selected) #{screen.id}
+                else
+                  option(value=screen.id) #{screen.id}
+
         button(type='submit') Potvrdit
+      hr  
       form(method='POST', action='/upload', class='uplood' id='imageUpload' enctype="multipart/form-data")
         input(type="file" name="img" multiple)
         button(type="submit") Nahrát
@@ -32,12 +44,21 @@ block content
     div
       if (config.screens)
         for screen in config.screens 
-          p #{screen.id}
+          a(href=`/${screen.id}`,style="background-color: orange") ID: #{screen.id}
+          div(style="margin-left: 20px")
+            p Soubory:
             for file in screen.files
-              em #{file}
+              em(style='margin:3px') #{file} 
+
+            p Interval obmeny: #{screen.speed/1000}s
+            form(action="/update/", method="post")
+              input(type="number" name="speed" placeholder="Pocet vterin") 
+              input(type="hidden" name="screen" value=screen.id)
+              div(style="display:flex")
+                button(type="submit") Nastav rychlost obrazovky
+
     form(method='POST' action='/update/remove')
       input.form-control(type='number', id='screenID', name='screenID' placeholder='ID Obrazovky' style="width: 300px")
       button(type='submit') Odebrat obrazovku
     
-    +a-btn-warning("/") K prezentaci
     
