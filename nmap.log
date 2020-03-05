@@ -1,0 +1,793 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-02-20 09:44 CET
+Nmap scan report for NPS.SKYLABNET.local (192.168.240.3)
+Host is up (0.0011s latency).
+Not shown: 994 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for ZAKFS01.SKYLABNET.local (192.168.240.4)
+Host is up (0.0011s latency).
+Not shown: 992 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+111/tcp  open  rpcbind
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+2049/tcp open  nfs
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for PLUTO.SKYLABNET.local (192.168.240.5)
+Host is up (0.0011s latency).
+Not shown: 974 filtered ports
+PORT     STATE SERVICE
+25/tcp   open  smtp
+80/tcp   open  http
+81/tcp   open  hosts2-ns
+110/tcp  open  pop3
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+143/tcp  open  imap
+443/tcp  open  https
+444/tcp  open  snpp
+445/tcp  open  microsoft-ds
+465/tcp  open  smtps
+587/tcp  open  submission
+593/tcp  open  http-rpc-epmap
+808/tcp  open  ccproxy-http
+993/tcp  open  imaps
+995/tcp  open  pop3s
+1801/tcp open  msmq
+2103/tcp open  zephyr-clt
+2105/tcp open  eklogin
+2107/tcp open  msmq-mgmt
+2525/tcp open  ms-v-worlds
+3389/tcp open  ms-wbt-server
+5060/tcp open  sip
+6001/tcp open  X11:1
+6667/tcp open  irc
+6669/tcp open  irc
+
+Nmap scan report for DB01.SKYLABNET.local (192.168.240.9)
+Host is up (0.0012s latency).
+Not shown: 989 closed ports
+PORT      STATE SERVICE
+80/tcp    open  http
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+1433/tcp  open  ms-sql-s
+2383/tcp  open  ms-olap4
+3389/tcp  open  ms-wbt-server
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+
+Nmap scan report for nas02.skylabnet.local (192.168.240.11)
+Host is up (0.0011s latency).
+Not shown: 985 closed ports
+PORT     STATE SERVICE
+22/tcp   open  ssh
+23/tcp   open  telnet
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+161/tcp  open  snmp
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+873/tcp  open  rsync
+2049/tcp open  nfs
+3260/tcp open  iscsi
+3261/tcp open  winshadow
+3306/tcp open  mysql
+5000/tcp open  upnp
+5001/tcp open  commplex-link
+
+Nmap scan report for SPS.SKYLABNET.local (192.168.240.12)
+Host is up (0.00091s latency).
+Not shown: 984 closed ports
+PORT      STATE    SERVICE
+80/tcp    open     http
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+443/tcp   open     https
+445/tcp   open     microsoft-ds
+808/tcp   open     ccproxy-http
+1025/tcp  filtered NFS-or-IIS
+1026/tcp  open     LSA-or-nterm
+1027/tcp  open     IIS
+1028/tcp  filtered unknown
+1031/tcp  open     iad2
+1084/tcp  filtered ansoft-lm-2
+1183/tcp  open     llsurfup-http
+2222/tcp  open     EtherNetIP-1
+3389/tcp  open     ms-wbt-server
+16001/tcp filtered fmsascon
+
+Nmap scan report for TITAN.SKYLABNET.local (192.168.240.13)
+Host is up (0.0012s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+
+Nmap scan report for VOYAGER.SKYLABNET.local (192.168.240.15)
+Host is up (0.0012s latency).
+Not shown: 989 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+593/tcp  open  http-rpc-epmap
+1801/tcp open  msmq
+2103/tcp open  zephyr-clt
+2105/tcp open  eklogin
+2107/tcp open  msmq-mgmt
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for HDSERVER.SKYLABNET.local (192.168.240.16)
+Host is up (0.0015s latency).
+Not shown: 988 closed ports
+PORT      STATE    SERVICE
+80/tcp    open     http
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+443/tcp   open     https
+445/tcp   open     microsoft-ds
+3389/tcp  open     ms-wbt-server
+4443/tcp  open     pharos
+49152/tcp filtered unknown
+49153/tcp open     unknown
+49154/tcp open     unknown
+49155/tcp filtered unknown
+49156/tcp open     unknown
+
+Nmap scan report for NEPTUN.SKYLABNET.local (192.168.240.19)
+Host is up (0.0011s latency).
+Not shown: 991 closed ports
+PORT      STATE    SERVICE
+80/tcp    open     http
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+443/tcp   open     https
+445/tcp   open     microsoft-ds
+3389/tcp  open     ms-wbt-server
+49152/tcp filtered unknown
+49153/tcp open     unknown
+49154/tcp open     unknown
+
+Nmap scan report for SYSTEM4.SKYLABNET.local (192.168.240.24)
+Host is up (0.00098s latency).
+Not shown: 993 filtered ports
+PORT      STATE SERVICE
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+443/tcp   open  https
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+49153/tcp open  unknown
+49158/tcp open  unknown
+
+Nmap scan report for TERMIT.SKYLABNET.local (192.168.240.26)
+Host is up (0.0011s latency).
+Not shown: 992 filtered ports
+PORT      STATE SERVICE
+80/tcp    open  http
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+49153/tcp open  unknown
+49156/tcp open  unknown
+49167/tcp open  unknown
+
+Nmap scan report for 192.168.240.27
+Host is up (0.00065s latency).
+Not shown: 990 closed ports
+PORT      STATE    SERVICE
+80/tcp    open     http
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+3389/tcp  open     ms-wbt-server
+49152/tcp filtered unknown
+49153/tcp open     unknown
+49154/tcp open     unknown
+49155/tcp filtered unknown
+49161/tcp filtered unknown
+
+Nmap scan report for DEV-TEST-DB.SKYLABNET.local (192.168.240.30)
+Host is up (0.00057s latency).
+Not shown: 987 closed ports
+PORT      STATE    SERVICE
+80/tcp    open     http
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+1433/tcp  open     ms-sql-s
+2382/tcp  filtered ms-olap3
+3306/tcp  open     mysql
+3389/tcp  open     ms-wbt-server
+49152/tcp filtered unknown
+49153/tcp open     unknown
+49154/tcp open     unknown
+49155/tcp filtered unknown
+49158/tcp open     unknown
+
+Nmap scan report for SYSTEM3.SKYLABNET.local (192.168.240.35)
+Host is up (0.0012s latency).
+Not shown: 986 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+1025/tcp open  NFS-or-IIS
+1026/tcp open  LSA-or-nterm
+1027/tcp open  IIS
+1028/tcp open  unknown
+1029/tcp open  ms-lsa
+1030/tcp open  iad1
+1433/tcp open  ms-sql-s
+2383/tcp open  ms-olap4
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for DEV-TEST-APP.SKYLABNET.local (192.168.240.38)
+Host is up (0.00056s latency).
+Not shown: 992 filtered ports
+PORT      STATE SERVICE
+80/tcp    open  http
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+445/tcp   open  microsoft-ds
+3389/tcp  open  ms-wbt-server
+8002/tcp  open  teradataordbms
+49153/tcp open  unknown
+49155/tcp open  unknown
+
+Nmap scan report for MALDC01.SKYLABNET.local (192.168.240.40)
+Host is up (0.00076s latency).
+Not shown: 981 closed ports
+PORT      STATE    SERVICE
+53/tcp    open     domain
+88/tcp    open     kerberos-sec
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+389/tcp   open     ldap
+445/tcp   open     microsoft-ds
+464/tcp   open     kpasswd5
+593/tcp   open     http-rpc-epmap
+636/tcp   open     ldapssl
+3268/tcp  open     globalcatLDAP
+3269/tcp  open     globalcatLDAPssl
+3389/tcp  open     ms-wbt-server
+8000/tcp  open     http-alt
+8001/tcp  open     vcom-tunnel
+49152/tcp filtered unknown
+49153/tcp open     unknown
+49154/tcp open     unknown
+49155/tcp open     unknown
+49165/tcp open     unknown
+
+Nmap scan report for DEV-AGENT01.SKYLABNET.local (192.168.240.44)
+Host is up (0.00044s latency).
+Not shown: 989 closed ports
+PORT      STATE    SERVICE
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+3306/tcp  open     mysql
+3389/tcp  open     ms-wbt-server
+9090/tcp  open     zeus-admin
+49152/tcp filtered unknown
+49153/tcp open     unknown
+49154/tcp open     unknown
+49155/tcp filtered unknown
+49156/tcp filtered unknown
+
+Nmap scan report for DEV-AGENT02.SKYLABNET.local (192.168.240.45)
+Host is up (0.00042s latency).
+Not shown: 990 closed ports
+PORT      STATE    SERVICE
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+3306/tcp  open     mysql
+3389/tcp  open     ms-wbt-server
+9090/tcp  filtered zeus-admin
+49152/tcp filtered unknown
+49153/tcp open     unknown
+49154/tcp open     unknown
+49155/tcp filtered unknown
+
+Nmap scan report for 0019BA00339B.skylabnet.local (192.168.240.53)
+Host is up (0.049s latency).
+Not shown: 998 filtered ports
+PORT      STATE SERVICE
+80/tcp    open  http
+10000/tcp open  snet-sensor-mgmt
+
+Nmap scan report for SAMOEL-NTB.SKYLABNET.local (192.168.240.56)
+Host is up (0.00035s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for SKRBEK-NTB.SKYLABNET.local (192.168.240.58)
+Host is up (0.0012s latency).
+Not shown: 992 closed ports
+PORT      STATE    SERVICE
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+902/tcp   open     iss-realsecure
+912/tcp   open     apex-mesh
+3389/tcp  open     ms-wbt-server
+4000/tcp  open     remoteanything
+16992/tcp filtered amt-soap-http
+
+Nmap scan report for FortiEMS.SKYLABNET.local (192.168.240.59)
+Host is up (0.0011s latency).
+Not shown: 993 filtered ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+8000/tcp open  http-alt
+8443/tcp open  https-alt
+
+Nmap scan report for NTB-KUNC3.SKYLABNET.local (192.168.240.60)
+Host is up (0.00072s latency).
+Not shown: 995 closed ports
+PORT     STATE    SERVICE
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+3389/tcp open     ms-wbt-server
+5357/tcp filtered wsdapi
+
+Nmap scan report for NTB-HORAK1.SKYLABNET.local (192.168.240.63)
+Host is up (0.0025s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for Helpdesk3.SKYLABNET.local (192.168.240.64)
+Host is up (0.0010s latency).
+Not shown: 989 closed ports
+PORT      STATE    SERVICE
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+554/tcp   filtered rtsp
+2160/tcp  open     apc-2160
+2179/tcp  open     vmrdp
+2260/tcp  open     apc-2260
+2869/tcp  open     icslap
+3389/tcp  open     ms-wbt-server
+10243/tcp filtered unknown
+16992/tcp filtered amt-soap-http
+
+Nmap scan report for NTB-RBU.SKYLABNET.local (192.168.240.67)
+Host is up (0.0013s latency).
+Not shown: 986 closed ports
+PORT     STATE    SERVICE
+7/tcp    filtered echo
+9/tcp    filtered discard
+13/tcp   filtered daytime
+17/tcp   filtered qotd
+19/tcp   filtered chargen
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+515/tcp  open     printer
+808/tcp  filtered ccproxy-http
+902/tcp  open     iss-realsecure
+912/tcp  open     apex-mesh
+3389/tcp open     ms-wbt-server
+9001/tcp filtered tor-orport
+
+Nmap scan report for FLORES-NTB2.SKYLABNET.local (192.168.240.70)
+Host is up (0.0011s latency).
+Not shown: 993 closed ports
+PORT      STATE    SERVICE
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+902/tcp   open     iss-realsecure
+912/tcp   open     apex-mesh
+3389/tcp  open     ms-wbt-server
+16992/tcp filtered amt-soap-http
+
+Nmap scan report for OPALKA-NTB.SKYLABNET.local (192.168.240.71)
+Host is up (0.00066s latency).
+Not shown: 990 closed ports
+PORT     STATE    SERVICE
+81/tcp   open     hosts2-ns
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+443/tcp  open     https
+445/tcp  open     microsoft-ds
+1034/tcp open     zincite-a
+1433/tcp filtered ms-sql-s
+2383/tcp filtered ms-olap4
+3306/tcp open     mysql
+3389/tcp open     ms-wbt-server
+
+Nmap scan report for NTB-MACA.SKYLABNET.local (192.168.240.72)
+Host is up (0.0022s latency).
+Not shown: 994 closed ports
+PORT      STATE    SERVICE
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+3389/tcp  open     ms-wbt-server
+5357/tcp  open     wsdapi
+16992/tcp filtered amt-soap-http
+
+Nmap scan report for NTB-TVRDY2.SKYLABNET.local (192.168.240.73)
+Host is up (0.0011s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+2179/tcp open  vmrdp
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for NTB-STANKOVA2.SKYLABNET.local (192.168.240.74)
+Host is up (0.0015s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for CM4730.SKYLABNET.local (192.168.240.78)
+Host is up (0.00097s latency).
+Not shown: 991 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+23/tcp   open  telnet
+80/tcp   open  http
+443/tcp  open  https
+515/tcp  open  printer
+631/tcp  open  ipp
+1783/tcp open  unknown
+7627/tcp open  soap-http
+9100/tcp open  jetdirect
+
+Nmap scan report for NTB-BIGASRA.SKYLABNET.local (192.168.240.79)
+Host is up (0.0015s latency).
+Not shown: 995 closed ports
+PORT     STATE    SERVICE
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+3389/tcp open     ms-wbt-server
+5357/tcp filtered wsdapi
+
+Nmap scan report for DESKTOP-ECOPI9C.SKYLABNET.local (192.168.240.81)
+Host is up (0.0011s latency).
+Not shown: 990 closed ports
+PORT      STATE    SERVICE
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+1074/tcp  open     warmspotMgmt
+1947/tcp  open     sentinelsrm
+3001/tcp  open     nessus
+3389/tcp  open     ms-wbt-server
+5357/tcp  filtered wsdapi
+8099/tcp  filtered unknown
+16992/tcp filtered amt-soap-http
+
+Nmap scan report for 192.168.240.86
+Host is up (0.0011s latency).
+Not shown: 991 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+22/tcp   open  ssh
+80/tcp   open  http
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+548/tcp  open  afp
+5000/tcp open  upnp
+5001/tcp open  commplex-link
+
+Nmap scan report for TVAROHOVA-NTB.SKYLABNET.local (192.168.240.87)
+Host is up (0.00059s latency).
+Not shown: 995 closed ports
+PORT     STATE    SERVICE
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+3389/tcp open     ms-wbt-server
+5357/tcp filtered wsdapi
+
+Nmap scan report for VOSTIK.skylabnet.local (192.168.240.105)
+Host is up (0.0011s latency).
+Not shown: 994 closed ports
+PORT     STATE    SERVICE
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+2179/tcp open     vmrdp
+3389/tcp open     ms-wbt-server
+5357/tcp filtered wsdapi
+
+Nmap scan report for NTB-ROSA.SKYLABNET.local (192.168.240.106)
+Host is up (0.0013s latency).
+Not shown: 994 closed ports
+PORT      STATE    SERVICE
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+445/tcp   open     microsoft-ds
+3389/tcp  open     ms-wbt-server
+5357/tcp  filtered wsdapi
+16992/tcp filtered amt-soap-http
+
+Nmap scan report for VOSTIK.SKYLABNET.local (192.168.240.120)
+Host is up (0.0026s latency).
+Not shown: 994 closed ports
+PORT     STATE    SERVICE
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+2179/tcp open     vmrdp
+3389/tcp open     ms-wbt-server
+5357/tcp filtered wsdapi
+
+Nmap scan report for NTB-PROCHAZKOVA.SKYLABNET.local (192.168.240.131)
+Host is up (0.0027s latency).
+Not shown: 995 closed ports
+PORT     STATE    SERVICE
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+3389/tcp open     ms-wbt-server
+5357/tcp filtered wsdapi
+
+Nmap scan report for 192.168.240.135
+Host is up (0.0031s latency).
+Not shown: 995 closed ports
+PORT    STATE SERVICE
+21/tcp  open  ftp
+22/tcp  open  ssh
+23/tcp  open  telnet
+80/tcp  open  http
+443/tcp open  https
+
+Nmap scan report for Martin-HP.SKYLABNET.local (192.168.240.136)
+Host is up (0.0013s latency).
+Not shown: 991 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1801/tcp open  msmq
+2103/tcp open  zephyr-clt
+2105/tcp open  eklogin
+2107/tcp open  msmq-mgmt
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+
+Nmap scan report for ntb-misa.SKYLABNET.local (192.168.240.140)
+Host is up (0.0020s latency).
+Not shown: 985 closed ports
+PORT      STATE    SERVICE
+80/tcp    open     http
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+443/tcp   filtered https
+445/tcp   open     microsoft-ds
+1433/tcp  open     ms-sql-s
+3389/tcp  open     ms-wbt-server
+5357/tcp  filtered wsdapi
+16992/tcp filtered amt-soap-http
+49152/tcp filtered unknown
+49153/tcp open     unknown
+49154/tcp open     unknown
+49155/tcp filtered unknown
+49156/tcp filtered unknown
+49157/tcp filtered unknown
+
+Nmap scan report for 192.168.240.141
+Host is up (0.0013s latency).
+Not shown: 998 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+80/tcp open  http
+
+Nmap scan report for NTB-CERNY2.SKYLABNET.local (192.168.240.151)
+Host is up (0.00053s latency).
+Not shown: 987 closed ports
+PORT      STATE    SERVICE
+80/tcp    open     http
+81/tcp    open     hosts2-ns
+135/tcp   open     msrpc
+139/tcp   open     netbios-ssn
+443/tcp   open     https
+445/tcp   open     microsoft-ds
+2383/tcp  filtered ms-olap4
+3306/tcp  open     mysql
+3389/tcp  open     ms-wbt-server
+16992/tcp filtered amt-soap-http
+49152/tcp filtered unknown
+49153/tcp filtered unknown
+49154/tcp filtered unknown
+
+Nmap scan report for NTB-ANONYMR.SKYLABNET.local (192.168.240.152)
+Host is up (0.0011s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for HELPDESK10.SKYLABNET.local (192.168.240.153)
+Host is up (0.0013s latency).
+Not shown: 995 closed ports
+PORT     STATE    SERVICE
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+3389/tcp open     ms-wbt-server
+5357/tcp filtered wsdapi
+
+Nmap scan report for NTB-BURIAN.SKYLABNET.local (192.168.240.156)
+Host is up (0.0013s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+
+Nmap scan report for HPM477_HD.SKYLABNET.local (192.168.240.160)
+Host is up (0.0012s latency).
+Not shown: 993 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+443/tcp  open  https
+515/tcp  open  printer
+631/tcp  open  ipp
+8080/tcp open  http-proxy
+8291/tcp open  unknown
+9100/tcp open  jetdirect
+
+Nmap scan report for 192.168.240.162
+Host is up (0.0010s latency).
+Not shown: 990 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+23/tcp   open  telnet
+80/tcp   open  http
+280/tcp  open  http-mgmt
+443/tcp  open  https
+515/tcp  open  printer
+631/tcp  open  ipp
+1783/tcp open  unknown
+7627/tcp open  soap-http
+9100/tcp open  jetdirect
+
+Nmap scan report for 192.168.240.168
+Host is up (0.0065s latency).
+Not shown: 995 closed ports
+PORT     STATE SERVICE
+21/tcp   open  ftp
+23/tcp   open  telnet
+80/tcp   open  http
+515/tcp  open  printer
+9100/tcp open  jetdirect
+
+Nmap scan report for LBP6650dn.SKYLABNET.local (192.168.240.169)
+Host is up (0.00042s latency).
+Not shown: 994 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+139/tcp  open  netbios-ssn
+515/tcp  open  printer
+631/tcp  open  ipp
+9002/tcp open  dynamid
+9100/tcp open  jetdirect
+
+Nmap scan report for NTB-UCETNI.SKYLABNET.local (192.168.240.191)
+Host is up (0.00067s latency).
+Not shown: 996 closed ports
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for NTB-TAKAC.SKYLABNET.local (192.168.240.195)
+Host is up (0.0013s latency).
+Not shown: 994 closed ports
+PORT     STATE    SERVICE
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+3260/tcp filtered iscsi
+3261/tcp filtered winshadow
+3389/tcp open     ms-wbt-server
+
+Nmap scan report for SAMOEL-NTB.skylabnet.local (192.168.240.197)
+Host is up (0.00027s latency).
+Not shown: 999 closed ports
+PORT   STATE SERVICE
+22/tcp open  ssh
+
+Nmap scan report for NB-STRNAD.SKYLABNET.local (192.168.240.201)
+Host is up (0.0019s latency).
+Not shown: 995 closed ports
+PORT     STATE    SERVICE
+135/tcp  open     msrpc
+139/tcp  open     netbios-ssn
+445/tcp  open     microsoft-ds
+3389/tcp open     ms-wbt-server
+5357/tcp filtered wsdapi
+
+Nmap scan report for kurcik-ntb.SKYLABNET.local (192.168.240.204)
+Host is up (0.00079s latency).
+Not shown: 990 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+1801/tcp open  msmq
+2103/tcp open  zephyr-clt
+2105/tcp open  eklogin
+2107/tcp open  msmq-mgmt
+3389/tcp open  ms-wbt-server
+5357/tcp open  wsdapi
+
+Nmap scan report for 192.168.240.218
+Host is up (0.0011s latency).
+Not shown: 994 filtered ports
+PORT     STATE SERVICE
+80/tcp   open  http
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+3389/tcp open  ms-wbt-server
+
+Nmap scan report for 192.168.240.247
+Host is up (0.0012s latency).
+Not shown: 991 closed ports
+PORT     STATE SERVICE
+80/tcp   open  http
+111/tcp  open  rpcbind
+139/tcp  open  netbios-ssn
+443/tcp  open  https
+445/tcp  open  microsoft-ds
+548/tcp  open  afp
+2049/tcp open  nfs
+5000/tcp open  upnp
+5001/tcp open  commplex-link
+
+Nmap done: 255 IP addresses (60 hosts up) scanned in 28.33 seconds
